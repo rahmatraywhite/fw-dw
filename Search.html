@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <title>Advance Search</title>
+    <title>Advance Seacrh</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
     <link rel="stylesheet" href="Blog.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
@@ -18,6 +18,12 @@
         href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Noto+Sans+Osage:400|Mulish:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+
+
+
+        <script src="https://cdn.tailwindcss.com"></script>
+
+
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -119,13 +125,55 @@
             }
         </style>
     </header>
-    <section class="u-align-center u-clearfix u-image u-shading u-section-2" src="" data-image-width="1280"
-        data-image-height="960" id="sec-6dcc">
-        <div class="u-clearfix u-sheet u-sheet-1">
-            <p class="u-large-text u-text u-text-variant u-text-1">Blog For Your Travel Inspiration</p>
-            <h1 class="u-text u-text-default u-title u-text-2">Inspiration</h1>
-        </div>
-    </section>
+  
+
+
+    <div class="bg-cover w-screen h-screen flex flex-col items-center justify-center" style="background-image: url(images/bg-search.jpg);">
+        <h1 class="text-gray-300 text-4xl">Search Packpage</h1>
+        
+        <form class="bg-white p-4 rounded-md mt-4">
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label for="fromDate" class="text-gray-600">From Date *</label>
+                    <input type="date" id="fromDate" class="block w-full border border-gray-300 rounded-md p-2">
+                </div>
+                <div>
+                    <label for="toDate" class="text-gray-600">To Date *</label>
+                    <input type="date" id="toDate" class="block w-full border border-gray-300 rounded-md p-2">
+                </div>
+                <div>
+                    <label for="packageType" class="text-gray-600">All Packpages types</label>
+                    <select id="packageType" class="block w-full border border-gray-300 rounded-md p-2">
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="location" class="text-gray-600">Location</label>
+                    <input type="text" id="location" class="block w-full border border-gray-300 rounded-md p-2">
+                </div>
+                <div>
+                    <label for="code" class="text-gray-600">Code</label>
+                    <input type="text" id="code" class="block w-full border border-gray-300 rounded-md p-2">
+                </div>
+                <div>
+                    <label for="adults" class="text-gray-600">No. of Adults</label>
+                    <div class="flex">
+                        <button type="button" class="px-4 py-2 bg-gray-300 rounded-l-md" id="decrement">-</button>
+                        <input type="number" id="adults" class="block w-full border-t border-b border-gray-300 rounded-none p-2" value="1">
+                        <button type="button" class="px-4 py-2 bg-gray-300 rounded-r-md" id="increment">+</button>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="w-full bg-blue-500 text-white py-2 mt-4 rounded-md" type="submit">SEARCH</button>
+        </form>
+    </div>
+    
+    
+
+
 
 
     <footer class="u-clearfix u-custom-color-5 u-footer" id="sec-9702">
